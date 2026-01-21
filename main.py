@@ -76,6 +76,9 @@ class SLRFrame:
         self.x_sol[0] = self.multilpler[0] + 5 * self.multilpler[1]
         self.x_sol[1] = -self.multilpler[0] - 5 * self.multilpler[1]
         self.x_sol[2] = self.multilpler[0] + 5 * self.multilpler[1]
+        #self.x_sol[0] = round(self.multilpler[0] + 5 * self.multilpler[1])
+        #self.x_sol[1] = round(-self.multilpler[0] - 5 * self.multilpler[1])
+        #self.x_sol[2] = round(self.multilpler[0] + 5 * self.multilpler[1])
         
         #子问题4，5，6，同上
         self.c = self.alpha * self.c * np.linalg.norm(self.preGx) / np.linalg.norm(self.countGx())
@@ -94,6 +97,9 @@ class SLRFrame:
         self.x_sol[3] = -self.multilpler[0] - 5 * self.multilpler[1]
         self.x_sol[4] = self.multilpler[0] + 5 * self.multilpler[1]
         self.x_sol[5] = -self.multilpler[0] - 5 * self.multilpler[1]
+        #self.x_sol[3] = round(-self.multilpler[0] - 5 * self.multilpler[1])
+        #self.x_sol[4] = round(self.multilpler[0] + 5 * self.multilpler[1])
+        #self.x_sol[5] = round(-self.multilpler[0] - 5 * self.multilpler[1])
 
     def end(self):
         print(self.x_sol)
